@@ -210,8 +210,8 @@ nav ul li:hover, nav ul li.active {
 }
 
 .sectiondivider img {
-  width:300px;
-  height:300px;
+  width:240px;
+  height:240px;
   position: static;
 }
 
@@ -336,8 +336,8 @@ nav ul li:hover, nav ul li.active {
     margin-left:-100px;
   }
   .sectiondivider img {
-    width:150px;
-    height:180px;
+    width:170px;
+    height:170px;
   }
   .sectiondivider .fa-stack {
     font-size: 100px;
@@ -346,7 +346,12 @@ nav ul li:hover, nav ul li.active {
   .sectiondivider h5 {
     font-size:15px;
     bottom:30px;
-    width:170px
+    width:240px
+  }
+
+  .section-icon {
+    width: 170px;
+    height: 170px;
   }
 
   .columned {
@@ -370,6 +375,11 @@ button {
   border: none;
   -webkit-appearance: button;
   -moz-appearance: button;
+}
+
+.section-icon {
+  width: 240px;
+  height: 240px;
 }
 
 .link-button {
