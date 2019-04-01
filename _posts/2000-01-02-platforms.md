@@ -26,5 +26,7 @@ icon: img/os-circle-logo.png
 
 
 <div class="link-button intro-text">
+<a href="https://marketplace.visualstudio.com/VSCode" target="_blank" style="color: white;text-decoration:none;">
     <b>Explore the extensions</b><br>
+</a>
 </div>

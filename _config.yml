@@ -17,7 +17,7 @@ markdown: kramdown
 title:       "VSCodium - The advanced editor"
 keywords:    "vscodium, vscode, visual, studio, code, atom, electron, development, programming, ide, editor"
 description: "Free/Libre Open Source Software Binaries of VSCode"
-source_link: "https://github.com/VSCodium/vscodium.github.io"
+source_link: "https://github.com/VSCodium/vscodium"
 favicon:     "img/favicon.ico"
 touch_icon:  "img/apple-touch-icon.png"
 #google_analytics_key:
