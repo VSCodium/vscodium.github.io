@@ -293,7 +293,7 @@ apt <span class="nb">install </span>vscodium
 </code></pre></div></div>
 
 <p>Add the repository:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s1">'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main'</span> | <span class="nb">sudo tee</span> <span class="nt">--append</span> /etc/apt/sources.list
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s1">'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main'</span> | <span class="nb">sudo tee</span> /etc/apt/sources.list.d/vscodium.list
 </code></pre></div></div>
 
 <p>Update then install vscodium:</p>
