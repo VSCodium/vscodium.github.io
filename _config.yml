@@ -14,20 +14,19 @@ markdown: kramdown
 
 
 ### content configuration ###
-title:       "VSCodium - The advanced editor"
+title:       "VSCodium - Open Source Binaries of VSCode"
 keywords:    "vscodium, vscode, visual, studio, code, atom, electron, development, programming, ide, editor"
 description: "Free/Libre Open Source Software Binaries of VSCode"
 source_link: "https://github.com/VSCodium/vscodium"
 favicon:     "img/favicon.ico"
 touch_icon:  "img/apple-touch-icon.png"
-#google_analytics_key:
 
 
 ### template colors, used site-wide via css ###
 colors:
   black:     '#111111'
   white:     '#f8f8f8'
-  blue:      '#49a7e9'
+  blue:      '#CDECFF'
   green:     '#9bcf2f'
   purple:    '#c869bf'
   orange:    '#fab125'
