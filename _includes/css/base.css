@@ -277,7 +277,7 @@
 .highlight pre, .highlight code { display:block; margin:0; padding:0; background: none; overflow:auto; word-wrap: normal; }
 
 .highlight, .linenodiv {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIHWPQ1dU1BgABzQC7XXMTYQAAAABJRU5ErkJggg==);
+  background-color: #003353;
   display:block;
   padding: 10px;
   margin-bottom:20px;
