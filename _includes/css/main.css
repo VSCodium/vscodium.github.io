@@ -403,7 +403,7 @@ button {
   padding: 10px 0;
   font-size: 1.8rem;
   text-align: center;
-  width: 400px;
+  max-width: 400px;
   background-color: #373277;
   margin-left: auto;
   margin-right: auto;
