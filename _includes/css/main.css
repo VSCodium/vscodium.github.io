@@ -55,7 +55,7 @@ pre {
 .highlight { margin:20px 5%; }
 
 /* ----- anchors ----- */
-nav > ul > li > a:focus { box-shadow: none; }
+nav > ul > li > a:focus, [aria-hidden="true"] > a { box-shadow: none; }
 a:focus { box-shadow: 0 0 0 3px {{ site.colors.purple }}cc; }
 
 /* ----- base elements ----- */
