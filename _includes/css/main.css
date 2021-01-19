@@ -1,5 +1,8 @@
-html { box-sizing: border-box; }
 *, *:before, *:after { box-sizing: inherit; }
+html { 
+  box-sizing: border-box; 
+  scroll-behavior: smooth;
+}
 
 /* ---------------------------*/
 /* ----- Special Styles ----- */
@@ -38,6 +41,8 @@ code, pre {
 }
 
 /* block code */
+blockquote, blockquote > p { color: #7B7070 !important; }
+
 pre code { background: none; display: block; }
 pre {
   display: block;
@@ -49,6 +54,9 @@ pre {
 
 .highlight { margin:20px 5%; }
 
+/* ----- anchors ----- */
+nav > ul > li > a:focus, [aria-hidden="true"] > a { box-shadow: none; }
+a:focus { box-shadow: 0 0 0 3px {{ site.colors.purple }}cc; }
 
 /* ----- base elements ----- */
 
@@ -171,7 +179,7 @@ nav ul li:hover, nav ul li.active {
   width:100%;
   min-height:240px;
   padding: 40px 0;
-  background:url(img/bgnoise.png);
+  background-image:url(img/bgnoise.png);
   /* generated noise from noisetexturegenerator.com */
 }
 
@@ -361,6 +369,13 @@ nav ul li:hover, nav ul li.active {
   }
 }
 
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 .intro-text {
   margin: 0 0 10px;
   font-family: "Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
@@ -388,7 +403,7 @@ button {
   padding: 10px 0;
   font-size: 1.8rem;
   text-align: center;
-  width: 400px;
+  max-width: 400px;
   background-color: #373277;
   margin-left: auto;
   margin-right: auto;

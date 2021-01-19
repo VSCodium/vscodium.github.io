@@ -16,7 +16,7 @@
 	{% if site.touch_icon %}<link rel="apple-touch-icon" href="{{ site.touch_icon }}">{% endif %}
 </head>
 <body>
-  <div id="main">
+  <div role="main" id="main">
 
     <nav><ul>
       {% for node in site.posts reversed %}
@@ -58,6 +58,5 @@
     </div>
   </div>
 </body>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="site.js"></script>
 </html>
