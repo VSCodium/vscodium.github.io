@@ -325,6 +325,10 @@ nav ul li:hover, nav ul li.active {
 /* tiny size (phones) */
 @media only screen and (max-width: 380px) {
   nav ul li { min-width:90px; line-height:20px; }
+  {% for node in site.posts %}
+    {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
+    #{{id}} { scroll-margin-top: 28px; }
+  {% endfor %}
 }
 
 /* anything not desktop */
@@ -367,6 +371,11 @@ nav ul li:hover, nav ul li.active {
     -moz-column-count:    2;
     column-count:         2;
   }
+
+  {% for node in site.posts %}
+    {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
+    #{{id}} { scroll-margin-top: 48px; }
+  {% endfor %}
 }
 
 /* reduced motion */
