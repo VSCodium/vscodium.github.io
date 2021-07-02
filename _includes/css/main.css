@@ -23,7 +23,7 @@ html {
   {% capture bg %}{% if site.colors[node.bg] %}{{ site.colors[node.bg] }}{% else %}{{ node.bg }}{% endif %}{% endcapture %}
   {% capture fg %}{% if site.colors[node.color] %}{{ site.colors[node.color] }}{% else %}{{ node.color }}{% endif %}{% endcapture %}
   nav .p-{{id}} { border-color: {{ bg }}; }
-  #{{id}} { background-color: {{ bg }} !important; color: {{ fg }}; }
+  #{{id}} { background-color: {{ bg }} !important; color: {{ fg }}; scroll-margin-top: 68px; }
   #{{id}} a { color: {{ fg }}; }
   #{{id}} .sectiondivider { color: {{ bg }}; }
 {% endfor %}
@@ -325,6 +325,10 @@ nav ul li:hover, nav ul li.active {
 /* tiny size (phones) */
 @media only screen and (max-width: 380px) {
   nav ul li { min-width:90px; line-height:20px; }
+  {% for node in site.posts %}
+    {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
+    #{{id}} { scroll-margin-top: 28px; }
+  {% endfor %}
 }
 
 /* anything not desktop */
@@ -367,6 +371,11 @@ nav ul li:hover, nav ul li.active {
     -moz-column-count:    2;
     column-count:         2;
   }
+
+  {% for node in site.posts %}
+    {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
+    #{{id}} { scroll-margin-top: 48px; }
+  {% endfor %}
 }
 
 /* reduced motion */
