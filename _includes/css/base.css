@@ -270,8 +270,6 @@
 .highlight {
   color: #f8f8f2;
   table-layout: fixed;
-  white-space: nowrap;
-  width:90%;
 }
 
 .highlight pre, .highlight code { display:block; margin:0; padding:0; background: none; overflow:auto; word-wrap: normal; }
