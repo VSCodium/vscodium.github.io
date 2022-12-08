@@ -59,5 +59,18 @@
     </div>
   </div>
 <script src="site.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  // configure options for anchors
+  anchors.options = {
+    placement: "left",
+  };
+
+  // add anchors to all h2, h3, h4, h5, h6
+  anchors
+    .add()
+    // remove anchors from the following elements
+    .remove("#free-libre-open-source-software-binaries-of-vs-code");
+</script>
 </body>
 </html>

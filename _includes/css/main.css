@@ -58,6 +58,15 @@ pre {
 nav > ul > li > a:focus, [aria-hidden="true"] > a { box-shadow: none; }
 a:focus { box-shadow: 0 0 0 3px {{ site.colors.purple }}cc; }
 
+/* creates an invisible pseudo-element to adjust for the fixed navbar so the anchors takes you to a location above the link  */
+:target::before {
+    content: "";
+    display: block;
+    margin-top: -80px;
+    height: 80px;
+    width: 1px;
+}
+
 /* ----- base elements ----- */
 
 img {
