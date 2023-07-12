@@ -69,7 +69,7 @@ a:focus { box-shadow: 0 0 0 3px {{ site.colors.purple }}cc; }
 
 
 a:hover {
-  color: #fff;
+  color: #fff !important;
   margin: 0 -.25rem;
   padding: 0 .25rem;	
   box-shadow: inset 500px 0 0 0 #1A5FB4;
