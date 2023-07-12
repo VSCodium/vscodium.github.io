@@ -67,6 +67,16 @@ a:focus { box-shadow: 0 0 0 3px {{ site.colors.purple }}cc; }
     width: 1px;
 }
 
+
+a:hover {
+  color: #fff;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;	
+  box-shadow: inset 500px 0 0 0 #1A5FB4;
+  transition: color 1s ease-in-out, box-shadow 1s ease-in-out;	
+}
+
+
 /* ----- base elements ----- */
 
 img {
