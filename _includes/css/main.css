@@ -427,14 +427,12 @@ button {
 
 .link-button {
   color: white;
-  margin: 20px 0 5px;
-  padding: 10px 0;
+  margin: 20px auto 5px auto;
+  padding: 40px 0;
   font-size: 1.8rem;
   text-align: center;
-  max-width: 400px;
+  max-width: 500px;
   background-color: #373277;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .feature-props {
