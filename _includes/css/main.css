@@ -433,6 +433,23 @@ button {
   text-align: center;
   max-width: 500px;
   background-color: #373277;
+  transition: color 1s ease-in-out,box-shadow 1s ease-in-out;
+}
+
+.link-button:hover {
+  box-shadow: inset 500px 0 0 0 #1a5fb4;
+}
+
+.link-button > a:hover {
+  box-shadow: none;
+}
+
+.no-box-shadow {
+  box-shadow: none;
+}
+
+.no-box-shadow:hover {
+  box-shadow: none;
 }
 
 .feature-props {
