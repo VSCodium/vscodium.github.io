@@ -33,3 +33,5 @@ colors:
 kramdown:
   auto_ids:  false
 
+include:
+   - ".well-known"
