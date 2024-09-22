@@ -72,7 +72,7 @@ a:hover {
   color: #fff !important;
   margin: 0 -.25rem;
   padding: 0 .25rem;	
-  box-shadow: inset 500px 0 0 0 #1A5FB4;
+  box-shadow: inset 800px 0 0 0 #1A5FB4;
   transition: color 1s ease-in-out, box-shadow 1s ease-in-out;	
 }
 
@@ -189,6 +189,38 @@ nav ul li:hover, nav ul li.active {
   padding-top: 0;
 }
 
+/* Mobile Styles */
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    font-size: 25px;
+    padding: 15px;
+  }
+
+}
 
 /* ----- sections/articles ----- */
 

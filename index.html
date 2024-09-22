@@ -19,12 +19,15 @@
 <body>
   <div role="main" id="main">
 
-    <nav><ul>
+    <nav>
+      <div class="menu-toggle">☰</div>
+      <ul>
       {% for node in site.posts reversed %}
         {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
         <li class="p-{{id}}"><a href="#{{id}}">{{node.title}}</a></li>
       {% endfor %}
-    </ul></nav>
+      </ul>
+    </nav>
 
 
     {% for page in site.posts reversed %}
@@ -68,6 +71,13 @@
 
   // add anchors to all h2, h3, h4, h5, h6
   anchors.add();
+   // configure mobile menu
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navUl = document.querySelector('nav ul');
+
+  menuToggle.addEventListener('click', () => {
+    navUl.classList.toggle('show');
+  });
 </script>
 </body>
 </html>
