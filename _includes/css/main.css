@@ -195,7 +195,7 @@ nav ul li:hover, nav ul li.active {
   display: none;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 479px) {
   nav ul {
     display: none;
     flex-direction: column;
@@ -509,4 +509,31 @@ button {
 
 .feature-extensions {
   background-position: 101% 100%;
+}
+
+table {
+  display: block;
+  width: 100%;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+  font-size: 17px;
+  padding: 0 5%;
+  margin: 40px 0 20px 0;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border-top: 1px solid #d1d9e0;
+}
+
+table th, table td {
+    padding: 8px 14px;
+    border: 1px solid #d1d9e0;
+}
+
+.thanks {
+  .github {
+    font-weight: 600;
+  }
 }
