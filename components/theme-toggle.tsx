@@ -8,7 +8,11 @@ import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
-export function ThemeToggle() {
+type ThemeToggleProperties = {
+	variant?: 'default' | 'mobile';
+};
+
+export function ThemeToggle({ variant = 'default' }: ThemeToggleProperties) {
 	const { setTheme, theme, resolvedTheme } = useTheme();
 	const [mounted, setMounted] = useState(false);
 
@@ -30,11 +34,11 @@ export function ThemeToggle() {
 				<TooltipTrigger asChild>
 					<DropdownMenu>
 						<DropdownMenuTrigger asChild>
-							<Button variant='ghost' size='icon' className='w-9 px-0'>
+							<Button variant='ghost' size='icon' className={`${variant === 'default' ? 'w-9' : 'w-auto'} px-0`}>
 								{currentTheme === 'light' && <Sun className='h-[1.2rem] w-[1.2rem]' />}
 								{currentTheme === 'dark' && <Moon className='h-[1.2rem] w-[1.2rem]' />}
 								{currentTheme === 'system' && <Laptop className='h-[1.2rem] w-[1.2rem]' />}
-								<span className='sr-only'>Toggle theme</span>
+								<span className={variant === 'default' ? 'sr-only' : ''}>Toggle Theme</span>
 							</Button>
 						</DropdownMenuTrigger>
 						<DropdownMenuContent align='end'>

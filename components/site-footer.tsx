@@ -14,7 +14,15 @@ export function SiteFooter({ variant = 'default' }: SiteFooterProperties) {
 			<div className='container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row'>
 				<div className='flex items-center gap-2'>
 					<Image src={isInsiders ? '/vscodium-insiders-logo.svg' : '/vscodium-logo.svg'} alt='VSCodium Logo' width={24} height={24} className='h-6 w-6' />
-					<p className='text-sm text-muted-foreground'>© {new Date().getFullYear()} VSCodium. CC BY-NC-SA 4.0.</p>
+					<p className='text-sm text-muted-foreground'>© {new Date().getFullYear()} VSCodium
+						<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1' target='_blank' rel='license noopener noreferrer' className='inline-block'>
+							&nbsp;CC BY-NC-SA 4.0
+							<img className='m-1 h-5 inline-block' src='https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1' alt='' />
+							<img className='m-1 h-5 inline-block' src='https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1' alt='' />
+							<img className='m-1 h-5 inline-block' src='https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1' alt='' />
+							<img className='m-1 h-5 inline-block' src='https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1' alt='' />
+						</a>
+					</p>
 				</div>
 				<div className='flex gap-4'>
 					<Link

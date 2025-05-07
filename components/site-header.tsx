@@ -73,7 +73,7 @@ export function SiteHeader({ variant = 'default' }: SiteHeaderProperties) {
 								}
 							</div>
 							<div className='mt-4'>
-								<ThemeToggle />
+								<ThemeToggle variant='mobile'/>
 							</div>
 						</SheetContent>
 					</Sheet>

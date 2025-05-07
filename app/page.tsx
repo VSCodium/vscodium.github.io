@@ -35,11 +35,11 @@ export default async function Home() {
 						/>
 						<div className='mx-auto max-w-5xl py-12'>
 							<Card>
-								<CardContent className='m-12'>
+								<CardContent className='md:m-12 my-4 py-0'>
 									<p>
 										Microsoft's <code className='language-plaintext highlighter-rouge'>vscode</code> source code is open source (MIT-licensed), but the product available for download (Visual Studio Code) is licensed under <Link href='https://code.visualstudio.com/license' target='_blank' rel='noopener noreferrer' className='underline'>this not-FLOSS license</Link> and contains telemetry/tracking. According to <Link href='https://github.com/Microsoft/vscode/issues/60#issuecomment-161792005' target='_blank' rel='noopener noreferrer' className='underline'>this comment</Link> from a Visual Studio Code maintainer:
 									</p>
-									<blockquote className='m-6 border-l-2 pl-6 italic text-muted-foreground'>
+									<blockquote className='m-6 ml-0 border-l-2 pl-6 italic text-muted-foreground'>
 										<p>When we [Microsoft] build Visual Studio Code, we do exactly this. We clone the vscode repository, we lay down a customized product.json that has Microsoft specific functionality (telemetry, gallery, logo, etc.), and then produce a build that we release under our license.</p>
 										<p>When you clone and build from the vscode repo, none of these endpoints are configured in the default product.json. Therefore, you generate a “clean” build, without the Microsoft customizations, which is by default licensed under the MIT license</p>
 									</blockquote>
