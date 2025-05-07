@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 210 80% 65%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 210 80% 65%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 80% 65%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 210 80% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Inline code styling */
+code {
+  @apply bg-muted px-1 py-0.5 rounded text-sm font-mono;
+}
+
+.prose code {
+	@apply font-medium;
+	padding: .2em .4em;
+}
+
+.prose code:before, .prose code:after {
+	content: "";
+}
+
+.prose pre {
+	@apply bg-muted text-sm font-mono;
+	color: var(--tw-prose-code);
+}
+
+.prose pre code {
+	padding: 0;
+}
+/* Dark mode code block styling */
+.dark .prose pre {
+  @apply bg-zinc-900 border border-zinc-800;
+}
+
+.dark .prose code {
+  @apply bg-zinc-800 text-zinc-200;
+}
+
+.dark .prose a {
+  @apply text-primary hover:text-primary/80;
+}
+
+.dark .prose blockquote {
+  @apply border-l-4 border-zinc-700;
+}
+
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose h4 {
+  @apply text-zinc-100;
+}
+
+.dark .prose hr {
+  @apply border-zinc-800;
+}
+
+.dark .prose table {
+  @apply border-zinc-800;
+}
+
+.dark .prose thead {
+  @apply border-b border-zinc-800;
+}
+
+.dark .prose tbody tr {
+  @apply border-b border-zinc-800;
+}
+
+/* Smooth theme transition */
+:root {
+  --transition-duration: 0.3s;
+}
+
+body {
+  transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease;
+}
+
+* {
+  transition: border-color var(--transition-duration) ease, background-color var(--transition-duration) ease;
+}
