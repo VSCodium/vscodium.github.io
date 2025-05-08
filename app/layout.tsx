@@ -8,8 +8,8 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-	title: 'VSCodium - Free/Libre Open Source Software Binaries of VS Code',
-	description: 'VSCodium is a community-driven, freely-licensed binary distribution of Microsoft\'s editor VS Code.',
+	title: 'VSCodium - Free/Libre Open Source Software Binaries of Visual Studio Code',
+	description: 'VSCodium is a community-driven, freely-licensed binary distribution of Microsoft\'s editor Visual Studio Code.',
 };
 
 export default function RootLayout({
