@@ -31,8 +31,9 @@ export type TableOfContents = {
 
 export type DocumentationSection = {
 	title: string;
-	slug: string;
 	level: number;
+	slug?: string;
+	url?: string;
 };
 
 export type DocumentationPageInfo = {
@@ -46,7 +47,7 @@ export type DocumentationPageInfo = {
 // Function to extract title from markdown content
 function extractTitle(content: string): string {
 	const titleMatch = /^#\s+(.*)$/m.exec(content);
-	// return titleMatch ? titleMatch[1] : "Documentation"
+
 	if(titleMatch) {
 		return titleMatch[1];
 	}
@@ -102,15 +103,28 @@ function extractSections(content: string): DocumentationSection[] {
 		let [, hashes, slug, title] = match;
 		const level = hashes.length;
 
-		// Only include h2 and h3
-		if(level <= 3 && title !== 'Table of Contents') {
+		if((match = /\[(.*)]\((.*)\)/.exec(title))) {
+			const [, title, url] = match;
+
 			slug ||= slugify(title, { lower: true });
 
 			sections.push({
 				title,
-				slug,
 				level,
+				url,
 			});
+		}
+		else {
+			// Only include h2 and h3
+			if(level <= 3 && title !== 'Table of Contents') {
+				slug ||= slugify(title, { lower: true });
+
+				sections.push({
+					title,
+					level,
+					slug,
+				});
+			}
 		}
 	}
 

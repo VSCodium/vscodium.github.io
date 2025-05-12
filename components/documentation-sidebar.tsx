@@ -72,8 +72,7 @@ export function DocumentationSidebar({ pages }: DocumentationSidebarProperties) 
 												return null;
 											}
 
-											const sectionUrl
-                        = page.slug === 'index' ? `/docs#${section.slug}` : `/docs/${page.slug}#${section.slug}`;
+											const sectionUrl = section.slug ? (page.slug === 'index' ? `/docs#${section.slug}` : `/docs/${page.slug}#${section.slug}`) : section.url!;
 
 											return (
 												<li key={`${page.slug}-${section.slug}`}>
