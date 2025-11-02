@@ -1,0 +1,24 @@
+/* Code block container */
+pre {
+  position: relative;
+  background: #002b36;
+  color: #FFFFFF;
+  padding: 0.75rem 1rem !important;
+  border-radius: 6px;
+  overflow: auto;
+  min-height: 2.5rem; /* <-- ensures one-liners have room */
+}
+
+/* Copy button */
+.copy-button {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  line-height: 1; /* prevent vertical misalignment */
+}
