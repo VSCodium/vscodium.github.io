@@ -1,1 +1,4 @@
 _site/
+frontmatter.json
+taxonomyDb.json
+pinnedItemsDb.json
